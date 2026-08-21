@@ -1,17 +1,26 @@
-import { Geist, Geist_Mono, Outfit, Oxanium } from "next/font/google"
+import { Playfair_Display, Outfit, Geist_Mono } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-const oxaniumHeading = Oxanium({subsets:['latin'],variable:'--font-heading'});
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-heading",
+})
 
-const outfit = Outfit({subsets:['latin'],variable:'--font-sans'})
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-sans" })
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const metadata = {
+  title: "Photography Portfolio",
+  description:
+    "Documentary and portrait photography — quiet moments, honest light.",
+}
 
 export default function RootLayout({
   children,
@@ -22,7 +31,13 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", outfit.variable, oxaniumHeading.variable)}
+      className={cn(
+        "antialiased",
+        fontMono.variable,
+        "font-sans",
+        outfit.variable,
+        playfair.variable
+      )}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
