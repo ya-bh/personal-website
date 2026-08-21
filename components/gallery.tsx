@@ -19,7 +19,7 @@ const images = [
   {
     src: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80",
     alt: "Landscape — rolling green hills under overcast sky",
-    span: "col-span-2",
+    span: "sm:col-span-2",
   },
   {
     src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80",
