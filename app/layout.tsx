@@ -17,9 +17,9 @@ const fontMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: "Photography Portfolio",
+  title: "Alex Rivera — Photography Portfolio",
   description:
-    "Documentary and portrait photography — quiet moments, honest light.",
+    "Documentary and portrait photography by Alex Rivera — quiet moments, honest light.",
 }
 
 export default function RootLayout({
